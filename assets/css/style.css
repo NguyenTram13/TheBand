@@ -35,7 +35,7 @@ html{
     width: 100%;
 }
 .col-third{
-    width: calc(100% /3);
+    width: 33.33333%;
     
 }
 .mt-8{
@@ -43,6 +43,9 @@ html{
  }
  .mt-16{
     margin-top: 16px !important;
+}
+.mt-32{
+    margin-top: 32px !important;
 }
 
 .btn{
@@ -78,9 +81,8 @@ html{
     right: 0;
     height: 46px;
     background-color: black; 
-    /* 
-    z-index: 999; */
-    overflow: hidden;
+    z-index: 999;
+    /* overflow: hidden; */
 }
 
 #nav{
@@ -146,17 +148,35 @@ html{
     line-height: 38px;
 }
 
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
 
+#header .mobile-menu-btn,
 #header .search-btn {
     float : right;
     padding: 0 21px;
-    
 
 }
+
+
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+
+
+
 #header .search-btn:hover{
     background-color: #f44336;
     cursor: pointer;
 }
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 20px;
@@ -200,9 +220,12 @@ html{
 
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 #content .section-heading{
     font-size: 30px;
@@ -231,7 +254,7 @@ html{
 }
 
 #content .member-list{
-    margin-top: 48px;
+    margin-top: 32px;
 }
 
 #content .member-item{
@@ -283,7 +306,7 @@ html{
 /* place */
 #content .place-list{
    
-    margin-top: 32px;
+    margin-top: 16px;
     /* margin-bottom: 48px; */
     /* height: 100%;
     display: block;
